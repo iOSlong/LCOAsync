@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'LCOAsync_Example' do
   pod 'LCOAsync', :path => '../'
+  pod 'HandyJSON', '~> 5.0.0'
 
   target 'LCOAsync_Tests' do
     inherit! :search_paths

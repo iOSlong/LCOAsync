@@ -245,7 +245,7 @@ public class LCSignTask: NSObject {
             Thread.sleep(forTimeInterval: 2.0)              // 模拟耗时操作
         }
     }
-    func excuteTaskMark(task:Any)  {
+    public func excuteTaskMark(task:Any)  {
         let currentThread:NSString = Thread.current.description as NSString
         print("task:\(task) in thread:\(currentThread.substring(from: "<NSThread:".count))") // 打印当前线程
     }

@@ -16,6 +16,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        let vc:ViewController = ViewController()
+        vc.title  = "gcd demo"
+        
+        
+        if let file = Bundle.main.path(forResource: "SignType", ofType: "plist"){
+            let plistInfos:NSArray =  NSArray(contentsOf: URL(fileURLWithPath: file))! as NSArray
+            
+            let models:NSMutableArray = NSMutableArray.init()
+            for sections in plistInfos {
+                let rows:NSMutableArray = NSMutableArray.init()
+                for item in (sections as! NSArray) {
+                    let model:LCSignModel = LCSignModel.deserialize(from: (item as! NSDictionary))!
+                    rows.add(model)
+                }
+                models.add(rows)
+            }
+            vc.dataSource = models
+        } else {
+            print("file SignType.plist can't be find!")
+        }
+        
+        
+        
+        let nav:UINavigationController = UINavigationController.init(rootViewController: vc)
+        
+        self.window?.rootViewController = nav
+        
+        
+        
+        
         return true
     }
 

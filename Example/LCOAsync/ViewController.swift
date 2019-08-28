@@ -9,67 +9,73 @@
 import UIKit
 import LCOAsync
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
-    var isBlinking = false
-    let blinkingLabel = LCLabel(frame: CGRect(x: 10, y: 20, width: 200, height: 30))
+    var tableView:UITableView? = nil
+    var dataSource:NSMutableArray? = [];
+    var selfDispatchModel:Bool? = false
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.dataSource?.count ?? 1
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section\(section)"
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let rows:NSArray = self.dataSource?[section] as! NSArray
+        return rows.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let identifier = "cellReuseID"
+        var cell:UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: identifier)
+        if cell == nil {
+            cell = UITableViewCell.init(style:.subtitle, reuseIdentifier: identifier)
+        }
+        cell?.accessoryType = .detailDisclosureButton
+        let rows:NSArray = self.dataSource?[indexPath.section] as! NSArray
+        let model:LCSignModel = rows[indexPath.row] as! LCSignModel
+        cell?.textLabel?.text = model.signDesc
+        cell?.detailTextLabel?.text = model.signName
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let rows:NSArray = self.dataSource?[indexPath.section] as! NSArray
+        let model:LCSignModel = rows[indexPath.row] as! LCSignModel
+        let signVC:SignViewController   = SignViewController()
+        signVC.signModel                = model
+        signVC.selfDispatchModel        = selfDispatchModel
+        self.navigationController?.pushViewController(signVC, animated:true)
+    }
+    
+    
+    func configureTableView() {
+        self.tableView =  UITableView(frame: self.view.frame, style: .plain)
+        self.tableView?.backgroundColor = .clear
+        self.tableView?.dataSource   = self
+        self.tableView?.delegate     = self
+        
+        self.view.addSubview(self.tableView!)
+    }
+    
+    
+    @objc func modelChange(sw:UISwitch) -> Void {
+        selfDispatchModel = sw.isOn
+        print("sw.isOn:\(sw.isOn)")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view.
+        configureTableView()
         
-        self.testLCLabel()
         
-        self.dispatch_sync_concurrent()
-        
-    }
-    func testLCLabel() {
-        // Setup the BlinkingLabel
-        blinkingLabel.text = "I blink!"
-        blinkingLabel.font = UIFont.systemFont(ofSize: 20)
-        view.addSubview(blinkingLabel)
-        blinkingLabel.startBlinking()
-        isBlinking = true
-        
-        // Create a UIButton to toggle the blinking
-        let toggleButton:UIButton = UIButton(frame: CGRect(x: 10, y: 60, width: 125, height: 30))
-        toggleButton.setTitle("Toggle Blinking", for: .normal)
-        toggleButton.setTitleColor(.red, for: .normal)
-        toggleButton.addTarget(self, action: #selector(toggleBlinking), for: .touchUpInside)
-        view.addSubview(toggleButton)
-    }
-    @objc func toggleBlinking()  {
-        print("");
-        if (isBlinking) {
-            blinkingLabel.stopBlinking()
-        } else {
-            blinkingLabel.startBlinking()
-        }
-        isBlinking = !isBlinking
-    }
-    func appendExcute(taskQueue: ()->Void) {
-        print("func begin:\n")
-        taskQueue()
-        print("func end\n")
-    }
-    
-    func dispatch_sync_concurrent() {
-        appendExcute(taskQueue: {
-            _ = LCQueueManager.share().dispatch(taskQueue: {
-                LCSignTask().excuteTask(task: 1)
-            }, type: .Async, mode: .Default)
-            _ = LCQueueManager.share().dispatch(taskQueue: {
-                LCSignTask().excuteTask(task: 2)
-            }, type: .Async, mode: .Globle)
-            _ = LCQueueManager.share().dispatch(taskQueue: {
-                LCSignTask().excuteTask(task: 3)
-            }, type: .Async, mode: .Concurrent)
-            let LCQM:LCQueueManager = LCQueueManager.share()
-            LCQM.dispatch(taskQueue: {
-                LCSignTask().excuteTask(task: 3)
-            }, type: .Async, mode: .Globle)
-        })
+        let swView:UISwitch = UISwitch.init(frame: CGRect.init(x: 0, y: 0, width: 40, height: 30))
+        swView.addTarget(self, action: #selector(modelChange(sw:)), for: .valueChanged)
+        let rightBarItem :UIBarButtonItem = UIBarButtonItem.init(customView: swView)
+        self.navigationItem.rightBarButtonItem = rightBarItem
     }
     
 }
-

@@ -1,16 +1,23 @@
 PODS:
+  - HandyJSON (5.0.0)
   - LCOAsync (0.1.0)
 
 DEPENDENCIES:
+  - HandyJSON (~> 5.0.0)
   - LCOAsync (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - HandyJSON
 
 EXTERNAL SOURCES:
   LCOAsync:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LCOAsync: b0bd52c705378926d1474d8dec56e632a9206f37
+  HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
+  LCOAsync: 0edd8a3be4c0771b7a59701373cc279016834f88
 
-PODFILE CHECKSUM: 3bade9fdb641dac2103a5ff251c84df95c9d2370
+PODFILE CHECKSUM: 2346f7ab5080c557b21472984c820ee76d1aced5
 
 COCOAPODS: 1.7.5
