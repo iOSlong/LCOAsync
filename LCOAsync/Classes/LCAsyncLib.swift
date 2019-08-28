@@ -9,12 +9,12 @@
 
 import Foundation
 
-enum LCDispatchType:Int {
+public enum LCDispatchType:Int {
     case Sync
     case Async
 }
 
-enum LCQueueMode:Int {
+public enum LCQueueMode:Int {
     case MainQueue   = 1
     case Default     = 2
     case Globle      = 3
@@ -22,7 +22,7 @@ enum LCQueueMode:Int {
     case Serial      = 4
 }
 
-public final class LCQueueManager {
+public class LCQueueManager {
     // MARK: - Properties
     private static var manager : LCQueueManager = {
        let manager = LCQueueManager()
@@ -46,11 +46,11 @@ public final class LCQueueManager {
     
     // MARK: - Accessors
 
-    class func share() -> LCQueueManager {
+    public class func share() -> LCQueueManager {
         return manager
     }
     
-    private func addQueue(queueModel:LCQueueMode) -> DispatchQueue  {
+    public func addQueue(queueModel:LCQueueMode) -> DispatchQueue  {
         switch queueModel {
         case .MainQueue:
             return DispatchQueue.main
@@ -78,7 +78,7 @@ public final class LCQueueManager {
     }
     
     // create new DispatchQueue every time called.
-    private func queue(queueModel:LCQueueMode) -> DispatchQueue {
+    public func queue(queueModel:LCQueueMode) -> DispatchQueue {
         var queue:DispatchQueue? = nil
         switch queueModel {
         case .MainQueue:
@@ -99,14 +99,14 @@ public final class LCQueueManager {
         return queue!
     }
     
-    func atomic(taskQueue:()->Void) -> LCQueueManager {
+    public func atomic(taskQueue:()->Void) -> LCQueueManager {
         _ = self.semaphore?.wait(timeout: .distantFuture)
         taskQueue()
         self.semaphore?.signal()
         return self
     }
     
-    func dispatch(taskQueue : @escaping ()->Void, type : LCDispatchType,mode : LCQueueMode, atomic:Bool) -> DispatchQueue {
+    public func dispatch(taskQueue : @escaping ()->Void, type : LCDispatchType,mode : LCQueueMode, atomic:Bool) -> DispatchQueue {
         let dispatchQueue = queue(queueModel: mode)
         switch type {
         case .Async: do {
@@ -129,7 +129,7 @@ public final class LCQueueManager {
         return dispatchQueue
     }
     
-    func dispatch(taskQueue : @escaping ()->Void, type : LCDispatchType,mode : LCQueueMode) -> DispatchQueue {
+    public func dispatch(taskQueue : @escaping ()->Void, type : LCDispatchType,mode : LCQueueMode) -> DispatchQueue {
         let dispatchQueue = queue(queueModel: mode)
         switch type {
         case .Async:
@@ -142,7 +142,7 @@ public final class LCQueueManager {
         return dispatchQueue
     }
     
-    func addDispatch(taskQueue : @escaping ()->Void, type : LCDispatchType,mode : LCQueueMode) -> LCQueueManager {
+    public func addDispatch(taskQueue : @escaping ()->Void, type : LCDispatchType,mode : LCQueueMode) -> LCQueueManager {
         let dispatchQueue = addQueue(queueModel: mode)
         switch type {
         case .Async:
@@ -155,14 +155,14 @@ public final class LCQueueManager {
         return self
     }
     
-    func dispatchAfter(taskQueue : @escaping ()->Void, mode : LCQueueMode, delayTime:Double) -> LCQueueManager {
+    public func dispatchAfter(taskQueue : @escaping ()->Void, mode : LCQueueMode, delayTime:Double) -> LCQueueManager {
         let dispatchQueue = queue(queueModel: mode)
         let dispatchTime = DispatchTime.now() + DispatchTimeInterval.milliseconds(Int(delayTime * 1000.0))
             dispatchQueue.asyncAfter(deadline: dispatchTime, execute: taskQueue)
         return self
     }
     
-    func dispatchApply(taskQueue :@escaping (_ index:Int)->Void,type : LCDispatchType,mode : LCQueueMode, iterations:Int) -> LCQueueManager {
+    public func dispatchApply(taskQueue :@escaping (_ index:Int)->Void,type : LCDispatchType,mode : LCQueueMode, iterations:Int) -> LCQueueManager {
         let dispatchQueue = queue(queueModel: mode)
         switch type {
         case .Async:
@@ -179,7 +179,7 @@ public final class LCQueueManager {
         return self
     }
     
-    func dispatchGroup(groupWorkItem:@escaping ()->Void, groupMode : LCQueueMode,notiMode : LCQueueMode, notifyHandle:@escaping ()->Void) -> LCQueueManager  {
+    public func dispatchGroup(groupWorkItem:@escaping ()->Void, groupMode : LCQueueMode,notiMode : LCQueueMode, notifyHandle:@escaping ()->Void) -> LCQueueManager  {
         let dispatchQueue = queue(queueModel: groupMode)
         let notifyQueue = queue(queueModel: notiMode)
         dispatchQueue.async(group: holdGroup, execute: DispatchWorkItem(block:groupWorkItem))
@@ -187,13 +187,13 @@ public final class LCQueueManager {
         return self
     }
     
-    func dispatchGroup(groupWorkItem:@escaping ()->Void, groupMode : LCQueueMode) -> LCQueueManager {
+    public func dispatchGroup(groupWorkItem:@escaping ()->Void, groupMode : LCQueueMode) -> LCQueueManager {
         let dispatchQueue = queue(queueModel: groupMode)
         dispatchQueue.async(group: holdGroup, execute: DispatchWorkItem(block:groupWorkItem))
         return self
     }
     
-    func dispatchGroupEnter(groupWorkItem:@escaping ()->Void,groupMode : LCQueueMode, type: LCDispatchType) -> LCQueueManager {
+    public func dispatchGroupEnter(groupWorkItem:@escaping ()->Void,groupMode : LCQueueMode, type: LCDispatchType) -> LCQueueManager {
         holdGroup.enter()
         let dispatchQueue = queue(queueModel: groupMode)
         switch type {
@@ -211,20 +211,20 @@ public final class LCQueueManager {
         return self
     }
     
-    func dispatchGroup(notifyHandle:@escaping ()->Void,notiMode : LCQueueMode) -> LCQueueManager {
+    public func dispatchGroup(notifyHandle:@escaping ()->Void,notiMode : LCQueueMode) -> LCQueueManager {
         let notifyQueue = queue(queueModel: notiMode)
         holdGroup.notify(queue: notifyQueue, execute: notifyHandle)
         return self
     }
     
-    func dispatchWait(waitTime:Double, waitResult:(_ result:DispatchTimeoutResult)->Void) -> LCQueueManager {
+    public func dispatchWait(waitTime:Double, waitResult:(_ result:DispatchTimeoutResult)->Void) -> LCQueueManager {
         let timeout = DispatchTime.now() + DispatchTimeInterval.milliseconds(Int(waitTime * 1000.0))
         let result:DispatchTimeoutResult = holdGroup.wait(timeout:timeout)
         waitResult(result)
         return self
     }
     
-    func dispatchWaitGroup(groupMode:LCQueueMode, waitTime:Double, groupWorkItem: @escaping ()->Void, waitResult:(_ result:DispatchTimeoutResult)->Void) -> LCQueueManager {
+    public func dispatchWaitGroup(groupMode:LCQueueMode, waitTime:Double, groupWorkItem: @escaping ()->Void, waitResult:(_ result:DispatchTimeoutResult)->Void) -> LCQueueManager {
         let dispatchQueue = queue(queueModel: groupMode)
         let timeout = DispatchTime.now() + DispatchTimeInterval.milliseconds(Int(waitTime * 1000.0))
         dispatchQueue.async(group: holdGroup, execute: DispatchWorkItem(block: groupWorkItem))
@@ -237,8 +237,8 @@ public final class LCQueueManager {
 
 
 
-public final class LCSignTask: NSObject {
-    func excuteTask(task : Any)  {
+public class LCSignTask: NSObject {
+    public func excuteTask(task : Any)  {
         for _  in 0...1 {
             self.excuteTaskMark(task: task)
             print("sleep 2.0f\n")

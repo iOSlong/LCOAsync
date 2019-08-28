@@ -1,0 +1,16 @@
+PODS:
+  - LCOAsync (0.1.0)
+
+DEPENDENCIES:
+  - LCOAsync (from `../`)
+
+EXTERNAL SOURCES:
+  LCOAsync:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LCOAsync: b0bd52c705378926d1474d8dec56e632a9206f37
+
+PODFILE CHECKSUM: 3bade9fdb641dac2103a5ff251c84df95c9d2370
+
+COCOAPODS: 1.7.5

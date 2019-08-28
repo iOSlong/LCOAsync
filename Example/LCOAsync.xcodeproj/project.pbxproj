@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		AC91EB319F5340154804080E /* Pods_LCOAsync_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF2A6B548A458BF1A219782 /* Pods_LCOAsync_Example.framework */; };
+		B16E2BD423152F60008E12A4 /* LCOAsync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16E2BD323152F60008E12A4 /* LCOAsync.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2AB3ED3D87C2748416B6E865 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2AB3ED3D87C2748416B6E865 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5DF2A6B548A458BF1A219782 /* Pods_LCOAsync_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCOAsync_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* LCOAsync_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCOAsync_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,9 +45,10 @@
 		92529B65EE793D1168161B7B /* Pods_LCOAsync_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCOAsync_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E437D847822E10CF785843 /* Pods-LCOAsync_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCOAsync_Tests.release.xcconfig"; path = "Target Support Files/Pods-LCOAsync_Tests/Pods-LCOAsync_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A650B5E423C97919F053D46D /* Pods-LCOAsync_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCOAsync_Example.release.xcconfig"; path = "Target Support Files/Pods-LCOAsync_Example/Pods-LCOAsync_Example.release.xcconfig"; sourceTree = "<group>"; };
-		BE8C073B80E16E1C5DB9BF84 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B16E2BD323152F60008E12A4 /* LCOAsync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LCOAsync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE8C073B80E16E1C5DB9BF84 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E11CF370BC1FB114D8213605 /* Pods-LCOAsync_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCOAsync_Example.debug.xcconfig"; path = "Target Support Files/Pods-LCOAsync_Example/Pods-LCOAsync_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		ED58BC419CBC0C30F5FBC027 /* LCOAsync.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LCOAsync.podspec; path = ../LCOAsync.podspec; sourceTree = "<group>"; };
+		ED58BC419CBC0C30F5FBC027 /* LCOAsync.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LCOAsync.podspec; path = ../LCOAsync.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16E2BD423152F60008E12A4 /* LCOAsync.framework in Frameworks */,
 				AC91EB319F5340154804080E /* Pods_LCOAsync_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +75,7 @@
 		1A8BC4F29379EB114B7D2C64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B16E2BD323152F60008E12A4 /* LCOAsync.framework */,
 				5DF2A6B548A458BF1A219782 /* Pods_LCOAsync_Example.framework */,
 				92529B65EE793D1168161B7B /* Pods_LCOAsync_Tests.framework */,
 			);
@@ -156,7 +160,6 @@
 				61E6E8DC4D8E9BA2E195B3C9 /* Pods-LCOAsync_Tests.debug.xcconfig */,
 				A0E437D847822E10CF785843 /* Pods-LCOAsync_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +230,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

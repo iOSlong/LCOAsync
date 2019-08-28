@@ -1,0 +1,6 @@
+framework module LCOAsync {
+  umbrella header "LCOAsync-umbrella.h"
+
+  export *
+  module * { export * }
+}

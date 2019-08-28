@@ -1,0 +1,22 @@
+{
+  "name": "LCOAsync",
+  "version": "0.1.0",
+  "summary": "A short description of LCOAsync.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/xuewu1011@163.com/LCOAsync",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "xuewu1011@163.com": "longxuewu@aggrx.com"
+  },
+  "source": {
+    "git": "https://github.com/xuewu1011@163.com/LCOAsync.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LCOAsync/Classes/**/*"
+}

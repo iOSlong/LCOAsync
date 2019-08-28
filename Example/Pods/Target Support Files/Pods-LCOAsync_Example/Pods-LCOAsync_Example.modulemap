@@ -1,0 +1,6 @@
+framework module Pods_LCOAsync_Example {
+  umbrella header "Pods-LCOAsync_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
