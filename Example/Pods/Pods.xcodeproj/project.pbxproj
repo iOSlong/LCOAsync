@@ -95,19 +95,19 @@
 		2E59F3AD126E9D772AB134109DE21DA6 /* ExtendCustomBasicType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtendCustomBasicType.swift; path = Source/ExtendCustomBasicType.swift; sourceTree = "<group>"; };
 		2FE8E05F93742C8E063773A9DA9820C6 /* ReflectionHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReflectionHelper.swift; path = Source/ReflectionHelper.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		35BE64061E7350CFC10EA4CCBFCB2C23 /* LCOAsync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LCOAsync.framework; path = LCOAsync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35BE64061E7350CFC10EA4CCBFCB2C23 /* LCOAsync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LCOAsync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3709721B8C7A8F0B4522B74F9371264D /* LCOAsync.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LCOAsync.xcconfig; sourceTree = "<group>"; };
 		3910579BD3875ED2B33F81BF8441FB45 /* HandyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HandyJSON-umbrella.h"; sourceTree = "<group>"; };
 		3BA3C4A463F298A8694BCBFE00EF5E30 /* Pods-LCOAsync_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LCOAsync_Tests-umbrella.h"; sourceTree = "<group>"; };
-		3E373EA08DD15EEC80CBFF476795769D /* Pods_LCOAsync_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LCOAsync_Example.framework; path = "Pods-LCOAsync_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E373EA08DD15EEC80CBFF476795769D /* Pods_LCOAsync_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCOAsync_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF33A0AFB0B46210D197923C8C5630B /* LCLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LCLabel.swift; path = LCOAsync/Classes/LCLabel.swift; sourceTree = "<group>"; };
 		4242042D14260D517297446870B04BC9 /* Pods-LCOAsync_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LCOAsync_Tests-Info.plist"; sourceTree = "<group>"; };
 		442E6ADE4374291A5301B252D229C7E0 /* HelpingMapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HelpingMapper.swift; path = Source/HelpingMapper.swift; sourceTree = "<group>"; };
-		447B966C9BC81AE1C362354E0B8E4136 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		447B966C9BC81AE1C362354E0B8E4136 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		46C8ECF9D15272CDD460E630604D5C41 /* Pods-LCOAsync_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LCOAsync_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		476B0985EE0207A01139DE58E606B049 /* Pods-LCOAsync_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LCOAsync_Tests.modulemap"; sourceTree = "<group>"; };
 		4A969ED92C3E93BF12B3DB40B2CD7E89 /* FieldDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldDescriptor.swift; path = Source/FieldDescriptor.swift; sourceTree = "<group>"; };
-		4C9B4A78C891575564890ED893AF26BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		4C9B4A78C891575564890ED893AF26BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4CF0F829F64D32E30D1806A7D15FE063 /* NSDecimalNumberTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDecimalNumberTransform.swift; path = Source/NSDecimalNumberTransform.swift; sourceTree = "<group>"; };
 		59788F665417B28EE54C1FE55AC6CC5C /* HandyJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HandyJSON.h; path = Source/HandyJSON.h; sourceTree = "<group>"; };
 		62030C05B66871AD7D5FFDD6D3439B29 /* LCOAsync.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LCOAsync.modulemap; sourceTree = "<group>"; };
@@ -125,13 +125,13 @@
 		81DCEDB513CFAE31A4E8EDCEC00813F6 /* HandyJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HandyJSON-Info.plist"; sourceTree = "<group>"; };
 		86A55116B2BD431F01B723AB696A92C4 /* Pods-LCOAsync_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LCOAsync_Example-umbrella.h"; sourceTree = "<group>"; };
 		8C1C0B8B0D65AB6CE7166A656F1B30D6 /* LCOAsync-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LCOAsync-umbrella.h"; sourceTree = "<group>"; };
-		91A8EAAC2519EAA0BB70CD8067609E90 /* LCOAsync.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LCOAsync.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		91A8EAAC2519EAA0BB70CD8067609E90 /* LCOAsync.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LCOAsync.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		946D3EA4A35C4C93901A0CA6B058BCB9 /* MangledName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MangledName.swift; path = Source/MangledName.swift; sourceTree = "<group>"; };
 		98259F9DF99DA53A0EF46BB695337145 /* Deserializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deserializer.swift; path = Source/Deserializer.swift; sourceTree = "<group>"; };
 		9C0AD0511AC4418C7D95FE76ED446955 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Source/Logger.swift; sourceTree = "<group>"; };
 		9CC1BE70F319DEB8077EA16E2AD11B1C /* LCAsyncLib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LCAsyncLib.swift; path = LCOAsync/Classes/LCAsyncLib.swift; sourceTree = "<group>"; };
 		9D7B0F8AEA8FA8C2ABC9891CFC62802A /* Pods-LCOAsync_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LCOAsync_Example-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3DBC108705C816DA73037797E819306 /* HexColorTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HexColorTransform.swift; path = Source/HexColorTransform.swift; sourceTree = "<group>"; };
 		A5A94ACFF3C0FAC3EBA2F05457213144 /* BuiltInBridgeType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BuiltInBridgeType.swift; path = Source/BuiltInBridgeType.swift; sourceTree = "<group>"; };
 		AC719B723A8F40953FE42D343C8F3D85 /* Transformable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transformable.swift; path = Source/Transformable.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		C178E7AC288267AE9115679BBD54C7B9 /* Pods-LCOAsync_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LCOAsync_Example-dummy.m"; sourceTree = "<group>"; };
 		CB0958440AFA2E61743856C777F270B0 /* Pods-LCOAsync_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LCOAsync_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CBD40E3007B674B59D388418C2720F83 /* LCOAsync-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LCOAsync-prefix.pch"; sourceTree = "<group>"; };
-		CD54121DDA84872534168702B5F92950 /* HandyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HandyJSON.framework; path = HandyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD54121DDA84872534168702B5F92950 /* HandyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HandyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF81902A67DD2C36D6DE516CEC2CC6A3 /* OtherExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OtherExtension.swift; path = Source/OtherExtension.swift; sourceTree = "<group>"; };
 		D2C35C260C3BEDABF61DBCDFCE490381 /* Measuable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Measuable.swift; path = Source/Measuable.swift; sourceTree = "<group>"; };
 		D3DCCCD54BC24797A5A45D05B7189225 /* DataTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTransform.swift; path = Source/DataTransform.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		ECB0194A66C5A0426717288480689403 /* TransformOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOf.swift; path = Source/TransformOf.swift; sourceTree = "<group>"; };
 		ED554397C222E2200FDC0308133BDE20 /* Pods-LCOAsync_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LCOAsync_Tests-dummy.m"; sourceTree = "<group>"; };
 		EE9A968C86EAEDA3A206FD6875AAC24D /* Pods-LCOAsync_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LCOAsync_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		EEE2FEB440542C6BB87C27B9A2913E7B /* Pods_LCOAsync_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LCOAsync_Tests.framework; path = "Pods-LCOAsync_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE2FEB440542C6BB87C27B9A2913E7B /* Pods_LCOAsync_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCOAsync_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2380E429367CFD1F48FBD60AA71689F /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Source/Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -306,7 +306,6 @@
 				E754320B7631AB8187E620DB572CD7FC /* URLTransform.swift */,
 				E3D2DE64200861B354FD2B3400859F0E /* Support Files */,
 			);
-			name = HandyJSON;
 			path = HandyJSON;
 			sourceTree = "<group>";
 		};
@@ -837,8 +836,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

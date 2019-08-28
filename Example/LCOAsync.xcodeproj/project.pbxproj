@@ -58,7 +58,7 @@
 		B16E2BDF2316562B008E12A4 /* SignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		BE8C073B80E16E1C5DB9BF84 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E11CF370BC1FB114D8213605 /* Pods-LCOAsync_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCOAsync_Example.debug.xcconfig"; path = "Target Support Files/Pods-LCOAsync_Example/Pods-LCOAsync_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		ED58BC419CBC0C30F5FBC027 /* LCOAsync.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LCOAsync.podspec; path = ../LCOAsync.podspec; sourceTree = "<group>"; };
+		ED58BC419CBC0C30F5FBC027 /* LCOAsync.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LCOAsync.podspec; path = ../LCOAsync.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

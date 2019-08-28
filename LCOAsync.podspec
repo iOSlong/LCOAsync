@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LCOAsync'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.swift_version    = '4.0'
   s.summary          = 'A CocoaPods library written in Swift. you can do some aysnc missons with LCOAsync.'
 
